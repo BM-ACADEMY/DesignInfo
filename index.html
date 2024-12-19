@@ -20,8 +20,386 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="shortcut icon" href="./images/Untitled-removebg-preview.png" type="image/x-icon">
 
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet"> 
+        
+            <!-- Owl Carousel CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+
+        
+        
+        
+        <style>
+            *{
+                color:red;
+            }
+           
+.text-darkblue {
+    color: #00008b; /* Dark blue color code */
+}
+.slider-container {
+            position: relative;
+            width: 100%;
+            height:100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider-item {
+  /* Slider Items */
+
+    position: relative; /* Important for positioning child elements like the title */
+    min-width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end; /* Align content towards the bottom */
+    justify-content: flex-start; /* Align content to the left */
+
+
+}
+
+.slider-item h3 {
+    position: absolute;
+    bottom: 0px;
+    font-size: 3em;
+    text-align: left; /* Align text to the left (change to right if needed) */
+    margin: 0 20px; /* Add some margin for spacing */
+}
+
+
+        @media (max-width: 768px) {
+    .slider-item {
+        height:100vh; /* Adjust height for smaller screens */
+        font-size: 24px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-item {
+        height: 100vh; /* Further reduce height for very small screens */
+        font-size: 20px; /* Smaller font size */
+    }
+}
+
+
+        .slider-item h3 {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .slider-item a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .slider-item a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Navigation buttons */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Optional: Add dots below slider for navigation */
+        .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .slider-dots span {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-dots .active {
+            background-color: red;
+        }
+
+
+
+        @media (max-width: 768px) {
+  .timeline-container .vertical-scrollable-timeline li.active .icon-holder {
+    background-color: red !important;
+  }
+
+  .timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
+    background-color: red;
+  }
+}
+
+
+/*aboutus*/
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.navbar {
+    padding: 10px;
+    background-color:white;
+    color: red;
+    text-align: right;
+    font-weight: bold;
+}
+
+.quality-indicator {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.section-about {
+        display: flex;
+        justify-content: center;
+        padding: 3rem;
+        background-color: #f8f9fa;
+    }
+    .section-left {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    /* Mission text */
+    .mission-text h2 {
+        font-size: 2rem;
+        color: #333;
+    }
+    .mission-text p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Service items */
+    .services-info {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    .service-item {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .service-item h4 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .service-item p {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    /* Icons */
+    .service-item i {
+        color: #007bff;
+        font-size: 1.2rem;
+    }
+
+    /* Progress Bar */
+    .progress-bar {
+        background-color: #e9ecef;
+        border-radius: 5px;
+        height: 10px;
+        margin: 0.7rem 0;
+        width: 100%;
+        position: relative;
+    }
+    .progress-fill {
+        background-color: #007bff;
+        width: 80%; /* Adjust this to represent progress */
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .services-info {
+            grid-template-columns: 1fr;
+        }
+        .mission-text h2 {
+            font-size: 1.8rem;
+        }
+        .mission-text p,
+        .service-item p {
+            font-size: 1rem;
+        }
+    }
+
+
+
+    .about-us-section {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        background-color: #f3f4f6;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-container {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    /* Carousel Text Styling */
+    .carousel-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .carousel-slide {
+        display: none;
+        padding: 1rem;
+    }
+
+    .carousel-slide.active {
+        display: block;
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.75rem;
+        color: #007bff;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-slide p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    /* Image Styling */
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .d{
+        background-color: yellow;
+        color:  red;
+        font-size: 1rem;
+    }
+    .slider-item h1{
+        color: red !important;
+    }
+    .f
+    {
+        color: red !important ;
+        font-size: 16px;
+    }
+    .sticky-wrapper.is-sticky .navbar {
+    background-color:white !important; /* Dark background when sticky */
+   
+}
+    
+   
+
+    /* Responsive Styling */
+    @media (max-width: 992px) {
+        .about-us-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .content-container {
+            flex-direction: column;
+        }
+
+        .image-container {
+            margin-top: 1.5rem;
+        }
+    }
+   .sticky-wrappe
+   {
+    background-color: red !important;
+   }
+   #demo
+   {
+    background-color: red !important;
+   }
+
+        </style>     
 <!--
 
 TemplateMo 590 topic listing
@@ -35,41 +413,44 @@ https://templatemo.com/tm-590-topic-listing
 
         <main>
 
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg"  data-aos="fade-down" data-aos-delay="100">
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>Design Info</span>
+                        <img src="./images/Untitled-removebg-preview.png" height="120px" width="120px">
+                       
                     </a>
 
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
+                   
     
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: red !important; height: 30px;" >
+                        <span class="navbar-toggler-icon"  ></span>
                     </button>
     
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                <a class="nav-link click-scroll" style="color: red !important;" href="#section_1">Home</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">About</a>
+                                <a class="nav-link click-scroll" style="color: red !important;" href="#section_6"> Our Mission</a>
                             </li>
-    
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">How we work</a>
+                                <a class="nav-link click-scroll" style="color: red !important;" href="#section_6">About</a>
                             </li>
-
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">Our Presence</a>
+                                <a class="nav-link click-scroll" style="color: red !important;" href="#section_4">Our Works</a>
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                                <a class="nav-link click-scroll"  style="color: red !important;" href="#section_5">How Does work</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" style="color: red !important;"  href="#section_7">Our Presence</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" style="color: red !important;" href="#section_8">Contact</a>
                             </li>
 
                            
@@ -79,69 +460,123 @@ https://templatemo.com/tm-590-topic-listing
                     </div>
                 </div>
             </nav>
+
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider-item" style="background-image: url('./images/360/360_1.jpg');">
+                        
+                       <h1 class="hvr-bounce-to-right" style="font-size: xx-large;">360 Pano</h1>
+                    </div>
+                    <div class="slider-item" style="background-image: url('./images/HRD/hdr6.jpg');">
+                        
+                        <h1 class="hvr-bounce-to-right" style="font-size: xx-large;">HDR</h1>
+                    </div>
+                    <div class="slider-item" style="background-image: url('./images/staging/stag4.jpg');">
+                        
+                        <h1 class="hvr-bounce-to-right" style="font-size: xx-large;">Staging</h1>
+                    </div>
+                    <div class="slider-item" style="background-image: url('./images/day/day3.jpg');">
+                        
+                        <h1 class="hvr-bounce-to-right" style="font-size: xx-large;">Day to Dusk</h1>
+                    </div>
+                    <div class="slider-item" style="background-image: url('./images/3d.jpg');">
+                        
+                        <h1 class="hvr-bounce-to-right" style="font-size: xx-large;">FloorPlan</h1>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="slider-nav">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+        
+                <!-- Dot navigation -->
+                <div class="slider-dots">
+                    <span class="dot" onclick="moveToSlide(0)"></span>
+                    <span class="dot" onclick="moveToSlide(1)"></span>
+                    <span class="dot" onclick="moveToSlide(2)"></span>
+                    <span class="dot" onclick="moveToSlide(3)"></span> 
+                     <span class="dot" onclick="moveToSlide(4)"></span>
+                </div>
+            </div>
+                    
+
+                    </div>
+                </div>
+        
+            <section class="section-about" id="section_6">
+                <div class="section-left">
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>Design Info Solution Pvt. Ltd. is a trusted name among leading providers of premium services, including Photo Editing, Image Manipulation, and more. Known for our commitment to quality and precision, we deliver solutions that bring your visual content to life.</p>
+                    </div>
+                    <div class="services-info">
+                        <!-- Happy Clients -->
+                        <div class="service-item">
+                            <h4><i class="fas fa-smile-beam"></i> Happy Clients</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <p>We believe in harnessing the collective creativity and expertise of our team to exceed client expectations every time.</p>
+                        </div>
+                        <!-- Branding -->
+                        <div class="service-item">
+                            <h4><i class="fas fa-bullhorn"></i> Branding</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <p>For us, it’s not just about profit; it’s about delivering success and value in every project we undertake.</p>
+                        </div>
+                        <!-- Real Estate Photography -->
+                        <div class="service-item">
+                            <h4><i class="fas fa-camera"></i> Real Estate Photography</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <p>We prioritize measurable results, focusing on impact, quality, and growth for your brand.</p>
+                        </div>
+                        <!-- Graphic Design -->
+                        <div class="service-item">
+                            <h4><i class="fas fa-paint-brush"></i> Graphic Design</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <p>Listening to our clients and understanding their needs is at the heart of what we do, allowing us to deliver visually stunning and effective designs.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           
+            <section class="about-us-section">
+                <div class="content-container">
+                    <!-- Text Carousel (Left Column) -->
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <h3>About Us</h3>
+                           <p>We are doing professional real estate image editing Services With the experience from 13 years working in this field, we understand your demands and expectations.
+
+                            Therefore, the quality of your output and your satisfaction are always our top purposes. And we are confident to provide you with good service, good quality and good price as well. Please contact us, to enjoy the best assistance
+                            Add our contents too(which our team took)
+                            </p>
+                        </div>
+                     
+                    </div>
+            
+                    <!-- Image Section (Right Column) -->
+                    <div class="image-container">
+                        <img src="./images/About.jpg" alt="About Us Image" class="about-us-image">
+                    </div>
+                </div>
+            </section>
             
 
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-12 mx-auto">
-                         
-                            <h1 class="text-white text-center">Design Info </h1>
-
-                            <h6 class="text-center">Solution Private Limitted
-                            </h6>
-
-                            
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">About Us</h5>
-
-                                            <p class="mb-0">We have a trusted name among leading providers of premium services, including Photo Editing, Image Manipulation, and more. Known for our commitment to quality and precision, we deliver solutions that bring your visual content to life.
-                                            </p>
-                                        </div>
-
-                                        
-                                    </div>
-
-                                    <img src="images/about.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="custom-block custom-block-overlay">
-                                <div class="d-flex flex-column h-100">
-                                    <img src="images/about2.jpg" class="custom-block-image img-fluid" alt="" style="height: 600px; width: 700px;"> 
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="explore-section section-padding" id="section_2">
+            <section class="explore-section section-padding" id="section_4">
                 <div class="container">
                     <div class="row">
 
                         <div class="col-12 text-center">
-                            <h2 class="mb-4">Browse Topics</h1>
+                            <h2 class="mb-4">Our Works</h1>
                         </div>
 
                     </div>
@@ -149,24 +584,24 @@ https://templatemo.com/tm-590-topic-listing
 
                 <div class="container-fluid">
                     <div class="row">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" id="a">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">HDR</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item" role="presentation" id="b">
                                 <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Staging</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item" role="presentation" id="c">
                                 <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Day to Dusk</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item" role="presentation" id="d">
                                 <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">360 Panos</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item" role="presentation" id="e">
                                 <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Floor Plan</button>
                             </li>
                         </ul>
@@ -180,6 +615,7 @@ https://templatemo.com/tm-590-topic-listing
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
                                     <div class="row">
+                                        
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">
                                                
@@ -189,7 +625,7 @@ https://templatemo.com/tm-590-topic-listing
                                                   
                                                     </div>
 
-                                                    <img src="images/HDR/hdr1.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr1.jpg" class="custom-block-image img-fluid" alt="">
                                                
                                             </div>
                                         </div>
@@ -203,7 +639,7 @@ https://templatemo.com/tm-590-topic-listing
                                                   
                                                     </div>
 
-                                                    <img src="images/HDR/hdr4.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr2.jpg" class="custom-block-image img-fluid" alt="">
                                                
                                             </div>
                                         </div>
@@ -214,11 +650,11 @@ https://templatemo.com/tm-590-topic-listing
                                                      
                                                     </div>
 
-                                                    <img src="images/HDR/hdr2.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr3.jpg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
-
+                                        
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                             <div class="custom-block bg-white shadow-lg">
                                          
@@ -226,7 +662,7 @@ https://templatemo.com/tm-590-topic-listing
                                                      
                                                     </div>
 
-                                                    <img src="images/HDR/hdr5.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr4.jpg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -237,7 +673,7 @@ https://templatemo.com/tm-590-topic-listing
                                                      
                                                     </div>
 
-                                                    <img src="images/HDR/hdr6.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr5.jpg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -248,15 +684,16 @@ https://templatemo.com/tm-590-topic-listing
                                                      
                                                     </div>
 
-                                                    <img src="images/HDR/hdr3.jpg" class="custom-block-image img-fluid" alt="">
+                                                    <img src="./images/HRD/hdr6.jpg" class="custom-block-image img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0" data-aos="flip-up" data-aos-delay="400">
                                     <div class="row">
+                                        <h1 class="text-black text-center">Before</h1>
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                                 <div class="custom-block bg-white shadow-lg">
                                                   
@@ -265,7 +702,7 @@ https://templatemo.com/tm-590-topic-listing
                                                          
                                                         </div>
 
-                                                        <img src="images/Staging/stag1.jpg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="images/stag1.jpg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -277,7 +714,7 @@ https://templatemo.com/tm-590-topic-listing
                                                             
                                                         </div>
 
-                                                        <img src="images/Staging/stag2.jpg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="images/stag2.jpg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -288,7 +725,20 @@ https://templatemo.com/tm-590-topic-listing
                                                             
                                                         </div>
 
-                                                        <img src="images/Staging/stag3.jpg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="images/stag3.jpg" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <h1 class="text-black text-center">After</h1>
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                  
+                                                        <div class="d-flex">
+                                                            
+                                                        </div>
+
+                                                        <img src="images/stag4.jpg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -299,18 +749,7 @@ https://templatemo.com/tm-590-topic-listing
                                                             
                                                         </div>
 
-                                                        <img src="images/Staging/stag4.jpg" class="custom-block-image img-fluid" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                                <div class="custom-block bg-white shadow-lg">
-                                                  
-                                                        <div class="d-flex">
-                                                            
-                                                        </div>
-
-                                                        <img src="images/Staging/stag5.jpg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="images/stag5.jpg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -322,15 +761,16 @@ https://templatemo.com/tm-590-topic-listing
                                                     
                                                         </div>
 
-                                                        <img src="images/Staging/stag6.jpg" class="custom-block-image img-fluid" alt="">
+                                                        <img src="images/stag6.jpg" class="custom-block-image img-fluid" alt="">
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                   </div>
 
-                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row">
-                                      
+                                <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">   <div class="row" data-aos="flip-up" data-aos-delay="400">
+                                  
+
                                          <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                                 <div class="custom-block bg-white shadow-lg">
                                                    
@@ -366,6 +806,8 @@ https://templatemo.com/tm-590-topic-listing
                                                     </a>
                                                 </div>
                                             </div>
+                                        
+
                                             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                                 <div class="custom-block bg-white shadow-lg">
                                                    
@@ -402,8 +844,10 @@ https://templatemo.com/tm-590-topic-listing
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0" data-aos="flip-up" data-aos-delay="400">
                                     <div class="row">
+                        
+
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                             <div class="custom-block bg-white shadow-lg">
                                                 
@@ -439,11 +883,49 @@ https://templatemo.com/tm-590-topic-listing
                                                     </a>
                                                 </div>
                                             </div>
+                                         
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                 
+                                                        <div class="d-flex">
+                                                            
+                                                        </div>
+
+                                                        <img src="images/360/360pana4.jpg" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                 
+                                                        <div class="d-flex">
+                                                            
+                                                        </div>
+
+                                                        <img src="images/360/360pana5.jpg" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                                <div class="custom-block bg-white shadow-lg">
+                                                 
+                                                        <div class="d-flex">
+                                                            
+                                                        </div>
+
+                                                        <img src="images/360/360pana6.jpg" class="custom-block-image img-fluid" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0" data-aos="flip-up" data-aos-delay="400" >
                                     <div class="row">
+                                     
                                         <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
                                             <div class="custom-block bg-white shadow-lg">
                                                 
@@ -478,6 +960,41 @@ https://templatemo.com/tm-590-topic-listing
                                                 </a>
                                             </div>
                                         </div>
+                                       
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                               
+                                                    <div class="d-flex">
+                                                        <H4>3D Coloured</H4>
+                                                    </div>
+
+                                                    <img src="images/floor4.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                               
+                                                    <div class="d-flex">
+                                                        <H4>3D Coloured</H4>
+                                                    </div>
+
+                                                    <img src="./images/floor4.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                               
+                                                    <div class="d-flex">
+                                                        <H4>3D Coloured</H4>
+                                                    </div>
+
+                                                    <img src="images/floor6.jpg" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
                               
 
                     </div>
@@ -485,7 +1002,7 @@ https://templatemo.com/tm-590-topic-listing
             </section>
 
 
-            <section class="timeline-section section-padding" id="section_3">
+            <section class="timeline-section section-padding" id="section_5">
                 <div class="section-overlay"></div>
 
                 <div class="container">
@@ -503,11 +1020,11 @@ https://templatemo.com/tm-590-topic-listing
                                     </div>
 
                                     <li>
-                                        <h4 class="text-white mb-3">Happy Clients – 100%
+                                        <h4 class="text-white mb-3"> Deliver with great quality 
+
                                         </h4>
 
-                                        <p class="text-white">We believe in harnessing the collective creativity and expertise of our team to exceed client expectations every time.
-                                        </p>
+                                      
 
                                         <div class="icon-holder">
                                           <i class="bi-search"></i>
@@ -515,21 +1032,19 @@ https://templatemo.com/tm-590-topic-listing
                                     </li>
                                     
                                     <li>
-                                        <h4 class="text-white mb-3">Real Estate Photography – 100%</h4>
+                                        <h4 class="text-white mb-3"> Fast turnaround time!! Only 8 - 12 hours
+                                        </h4>
 
-                                        <p class="text-white">We prioritize measurable results, focusing on impact, quality, and growth for your brand.
-                                        </p>
-
+                                     
                                         <div class="icon-holder">
                                           <i class="bi-bookmark"></i>
                                         </div>
                                     </li>
 
                                     <li>
-                                        <h4 class="text-white mb-3">Graphic Design – 100%</h4>
+                                        <h4 class="text-white mb-3"> working with no day off.
+                                        </h4>
 
-                                        <p class="text-white">Listening to our clients and understanding their needs is at the heart of what we do, allowing us to deliver visually stunning and effective designs.
-                                        </p>
 
                                         <div class="icon-holder">
                                           <i class="bi-book"></i>
@@ -537,15 +1052,32 @@ https://templatemo.com/tm-590-topic-listing
                                     </li>
 
                                     <li>
-                                        <h4 class="text-white mb-3">Branding – 100%</h4>
+                                        <h4 class="text-white mb-3">We commit our quality by trademark and long-term cooperation.
+                                        </h4>
 
-                                        <p class="text-white">For us, it’s not just about profit; it’s about delivering success and value in every project we undertake.
-                                        </p>
 
                                         <div class="icon-holder">
-                                          <i class="bi-brand"></i>
+                                            <i class="bi-award"></i> 
                                         </div>
                                     </li>
+
+
+                                    <li>
+                                        <h4 class="text-white mb-3"> Place your orders, you are not charged if you do not satisfy our quality.
+                                        </h4>
+
+
+                                        <div class="icon-holder">
+                                            <i class="bi-award"></i> 
+                                        </div>
+                                    </li>
+
+
+
+                                    
+                                    
+
+                                  
                                 </ul>
                             </div>
                         </div>
@@ -555,7 +1087,7 @@ https://templatemo.com/tm-590-topic-listing
             </section>
 
 
-            <section class="faq-section section-padding" id="section_4">
+            <section class="faq-section section-padding" id="section_7">
                 <div class="container">
                     <div class="row">
 
@@ -664,7 +1196,7 @@ https://templatemo.com/tm-590-topic-listing
             </section>
 
 
-            <section class="contact-section section-padding section-bg" id="section_5">
+            <section class="contact-section section-padding section-bg" id="section_8">
                 <div class="container">
                     <div class="row">
 
@@ -673,7 +1205,7 @@ https://templatemo.com/tm-590-topic-listing
                         </div>
 
                         <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.065641062665!2d-122.4230416990949!3d37.80335401520422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e1!3m2!1sen!2sth!4v1684340239744!5m2!1sen!2sth" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62514.71786763161!2d78.0940711076592!3d11.68237101938932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1a5ff4517b1%3A0x8f3f4463a67569d8!2sKamarajar%20Nagar%2C%20Periyakollappatty%2C%20Salem%2C%20Tamil%20Nadu%20636008!5e0!3m2!1sen!2sin!4v1732356881799!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
                     
@@ -681,23 +1213,27 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="col-lg-3 col-md-6 col-12 mx-auto">
                             <h4 class="mb-3">Our Office</h4>
 
-                            <p>Abc nagar, Pondy</p>
+                            <p class="f">7-4A, Aftha Residency,
+                                Kamarajar Nagar, 2nd Street,
+                                Chinnathirupathi,
+                                Salem - 636008, Tamil Nadu, India</p>
 
                             <hr>
 
                             <p class="d-flex align-items-center mb-1">
-                                <span class="me-2">Phone</span>
+                                <span class="me-2" style="color: black;">Phone</span>
 
-                                <a href="tel:  9944242926" class="site-footer-link">
-                                    994-424-2926
+                                <a href="tel:+919486788792" class="site-footer-link" style="color: red
+                                ;">
+                                +91 994-424-2926
                                 </a>
                             </p>
 
                             <p class="d-flex align-items-center">
-                                <span class="me-2">Email</span>
+                                <span class="me-2" style="color: black;">Email</span>
 
-                                <a href="mailto:abc@gmail.com" class="site-footer-link">
-                                   abc@gmail.com
+                                <a href="mailto:abc@gmail.com" class="site-footer-link"  style="color: red;">
+                                   help@designinfo.com
                                 </a>
                             </p>
                         </div>
@@ -707,14 +1243,14 @@ https://templatemo.com/tm-590-topic-listing
             </section>
         </main>
 
-<footer class="site-footer section-padding">
+<footer class="site-footer section-padding"  data-aos="fade-in" data-aos-delay="500">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-3 col-12 mb-4 pb-2">
-                        <a class="navbar-brand mb-2" href="index.html">
-                            <i class="bi-back"></i>
-                            <span>Design Info</span>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./images/Untitled-removebg-preview.png" height="120px" width="150px">
+                           
                         </a>
                     </div>
 
@@ -723,19 +1259,26 @@ https://templatemo.com/tm-590-topic-listing
 
                         <ul class="site-footer-links">
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
+                                <a href="#section_1" class="site-footer-link"  style="color: red;">Home</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_6" class="site-footer-link"  style="color: red;">Our Mission</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_3" class="site-footer-link"  style="color: red;">About</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_4" class="site-footer-link"  style="color: red;">Our Works</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_5" class="site-footer-link"  style="color: red;">How does it work?</a>
+                            </li>
+                            <li class="site-footer-link-item">
+                                <a href="#section_7" class="site-footer-link"  style="color: red;">Our Presence</a>
                             </li>
 
                             <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">About</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Our Presence</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact</a>
+                                <a href="#section_8" class="site-footer-link" style="color: red;">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -744,27 +1287,32 @@ https://templatemo.com/tm-590-topic-listing
                         <h6 class="site-footer-title mb-3">Information</h6>
 
                         <p class="text-white d-flex mb-1">
-                            <a href="tel:  994-424-2926" class="site-footer-link">
-                                9944242926
+                            <a href="tel:+919944242926" class="site-footer-link"  style="color:red;">
+                                +91 9944242926
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                abc@gmail.com
+                            <a href="mailto:help@designinfo.com" class="site-footer-link"  style="color: red;">
+                                help@designinfo.com
                             </a>
                         </p>
-                    </div>
+                        <p class="text-red f">
+                            7-4A, Aftha Residency,
+Kamarajar Nagar, 2nd Street,
+Chinnathirupathi,
+Salem - 636008, Tamil Nadu, India
+                        </p>
+                    </div> <br>
 
-                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                     
+                   
 
-                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 reserved.
-                        <br>
-                        
-                    </div>
-
+                    
                 </div>
+               <center> <div> 
+                <p class="copyright-text mt-lg-5 mt-4"  style="color: red;">Copyright <a href="https://bmtechx.in/" >BMTECHx</a> © 2024 reserved.
+                        <br>
+                </div></center>
             </div>
         </footer>
 
@@ -775,6 +1323,22 @@ https://templatemo.com/tm-590-topic-listing
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+        <script>
+            AOS.init({
+                offset: 120,          // Offset from the viewport before triggering
+                duration: 800,        // Animation duration in ms
+                easing: 'ease-in-out',// Easing function for animations
+                once: true            // Animate only once when scrolled into view
+            });
+
+            
+
+        </script>
+    
+        
 
     </body>
 </html>
